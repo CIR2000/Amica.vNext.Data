@@ -8,9 +8,9 @@ namespace Amica.vNext.Data
 {
 	public interface IDataProvider
 	{
-		List<T> GetItems<T> () where T: new();
+		List<T> Get<T> () where T: new();
 
-		T GetItem<T> (object id) where T: new();
+		T Get<T> (object id) where T: new();
 
 		void Update (object item);
 

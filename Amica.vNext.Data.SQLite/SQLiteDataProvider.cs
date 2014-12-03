@@ -20,7 +20,7 @@ namespace Amica.vNext.Data.SQLite
 			_database.CreateTable<Company> ();
 		}
 
-		public List<T> GetItems<T> () where T: new()
+		public List<T> Get<T> () where T: new()
 		{
 			lock (Locker) {
 				return (from i in _database.Table<T> ()
@@ -28,7 +28,7 @@ namespace Amica.vNext.Data.SQLite
 			}
 		}
 
-		public T GetItem<T> (object id) where T: new()
+		public T Get<T> (object id) where T: new()
 		{
 			lock (Locker) {
 				return _database.Get<T> (id);

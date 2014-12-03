@@ -22,12 +22,12 @@ namespace Amica.vNext.Data.SQLite
 		}
 
 
-		public async Task<List<T>> GetItemsAsync<T> () where T: new()
+		public async Task<List<T>> GetAsync<T> () where T: new()
 		{
 			return await _database.Table<T> ().ToListAsync ();
 		}
 
-		public async Task<T> GetItemAsync<T> (object id) where T: new()
+		public async Task<T> GetAsync<T> (object id) where T: new()
 		{
 			return await _database.GetAsync<T> (id);
 		}

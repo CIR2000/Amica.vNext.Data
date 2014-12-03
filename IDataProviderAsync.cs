@@ -7,9 +7,9 @@ namespace Amica.vNext.Data
 {
 	public interface IDataProviderAsync
 	{
-		Task<List<T>> GetItemsAsync<T> () where T: new();
+		Task<List<T>> GetAsync<T> () where T: new();
 
-		Task<T> GetItemAsync<T> (object id) where T: new();
+		Task<T> GetAsync<T> (object id) where T: new();
 
 		Task UpdateAsync (object item);
 

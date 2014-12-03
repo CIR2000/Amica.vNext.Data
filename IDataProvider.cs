@@ -4,7 +4,7 @@ using Amica.vNext.Models;
 
 namespace Amica.vNext.Data
 {
-	public interface IDatabase
+	public interface IDataProvider
 	{
 		List<Company> GetCompanies ();
 	}

@@ -1,5 +1,4 @@
-﻿using System;
-using SQLite.Net;
+﻿using SQLite.Net;
 
 namespace Amica.vNext.Data.SQLite
 {

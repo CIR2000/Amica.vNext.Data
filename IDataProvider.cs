@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using Amica.vNext.Models;
 
+// TODO split to a separate Project and repository.
+
 namespace Amica.vNext.Data
 {
 	public interface IDataProvider
@@ -17,7 +19,6 @@ namespace Amica.vNext.Data
 		void Delete (object item);
 
 		void Delete<T> (object id);
-
 	}
 }
 

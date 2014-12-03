@@ -36,13 +36,13 @@
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <ItemGroup>
-    <ProjectReference Include="..\..\Amica.vNext.Objects\Amica.vNext.Objects\Amica.vNext.Objects.csproj">
-      <Project>{5489E3A4-1031-4568-8B63-A28C64BF7778}</Project>
-      <Name>Amica.vNext.Objects</Name>
-    </ProjectReference>
     <ProjectReference Include="..\Amica.vNext.Data.csproj">
       <Project>{14DB434E-C093-4D29-8FC4-8B83DE9CEE44}</Project>
       <Name>Amica.vNext.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Amica.vNext.Models\Amica.vNext.Models\Amica.vNext.Models.csproj">
+      <Project>{5489E3A4-1031-4568-8B63-A28C64BF7778}</Project>
+      <Name>Amica.vNext.Models</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

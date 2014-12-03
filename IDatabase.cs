@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using Amica.vNext.Objects;
+using Amica.vNext.Models;
 
 namespace Amica.vNext.Data
 {

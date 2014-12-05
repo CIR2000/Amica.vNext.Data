@@ -35,10 +35,4 @@
     <Compile Include="IDataProviderAsync.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
-  <ItemGroup>
-    <ProjectReference Include="..\Amica.vNext.Models\Amica.vNext.Models\Amica.vNext.Models.csproj">
-      <Project>{5489E3A4-1031-4568-8B63-A28C64BF7778}</Project>
-      <Name>Amica.vNext.Models</Name>
-    </ProjectReference>
-  </ItemGroup>
 </Project>

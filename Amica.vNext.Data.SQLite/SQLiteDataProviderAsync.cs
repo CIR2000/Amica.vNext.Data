@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using System.Diagnostics;
 using Amica.vNext.Models;
 using SQLite.Net.Async;
+using System.Reflection;
 
 namespace Amica.vNext.Data.SQLite
 {
@@ -18,6 +18,7 @@ namespace Amica.vNext.Data.SQLite
 
 			// create the tables
 			_database.CreateTableAsync<Company> ().ContinueWith ((t) => {
+				System.Diagnostics.Debug.WriteLine ("db created.");
 			});
 		}
 

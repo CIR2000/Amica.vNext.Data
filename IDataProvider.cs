@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using Amica.vNext.Models;
 
 // TODO split to a separate Project and repository.
 

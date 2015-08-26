@@ -1,12 +1,11 @@
-﻿using System.Threading.Tasks;
-using System;
+﻿using Amica.vNext.Models;
+using SQLite.Net;
 using System.Collections.Generic;
 using System.Linq;
-using Amica.vNext.Models;
-using SQLite.Net;
 
 namespace Amica.vNext.Data.SQLite
 {
+    // ReSharper disable once InconsistentNaming
 	public class SQLiteDataProvider : IDataProvider
 	{
 		static readonly object Locker = new object ();
@@ -20,7 +19,7 @@ namespace Amica.vNext.Data.SQLite
 			_database.CreateTable<Company> ();
 		}
 
-		public List<T> Get<T> () where T: new()
+		public List<T> Get<T> () where T : class, new()
 		{
 			lock (Locker) {
 				return (from i in _database.Table<T> ()
@@ -28,7 +27,7 @@ namespace Amica.vNext.Data.SQLite
 			}
 		}
 
-		public T Get<T> (object id) where T: new()
+		public T Get<T> (object id) where T: class, new()
 		{
 			lock (Locker) {
 				return _database.Get<T> (id);

@@ -1,14 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Threading.Tasks;
 
 namespace Amica.vNext.Data
 {
 	public interface IDataProviderAsync
 	{
-		Task<List<T>> GetAsync<T> () where T: new();
+		Task<List<T>> GetAsync<T> () where T: class, new();
 
-		Task<T> GetAsync<T> (object id) where T: new();
+		Task<T> GetAsync<T> (object id) where T: class, new();
 
 		Task UpdateAsync (object item);
 

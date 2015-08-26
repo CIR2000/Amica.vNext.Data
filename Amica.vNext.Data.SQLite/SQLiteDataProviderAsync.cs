@@ -8,6 +8,7 @@ using System.Reflection;
 
 namespace Amica.vNext.Data.SQLite
 {
+    // ReSharper disable once InconsistentNaming
 	public class SQLiteDataProviderAsync : IDataProviderAsync
 	{
 		readonly SQLiteAsyncConnection _database;
@@ -23,12 +24,12 @@ namespace Amica.vNext.Data.SQLite
 		}
 
 
-		public async Task<List<T>> GetAsync<T> () where T: new()
+		public async Task<List<T>> GetAsync<T> () where T: class, new()
 		{
 			return await _database.Table<T> ().ToListAsync ();
 		}
 
-		public async Task<T> GetAsync<T> (object id) where T: new()
+		public async Task<T> GetAsync<T> (object id) where T: class, new()
 		{
 			return await _database.GetAsync<T> (id);
 		}

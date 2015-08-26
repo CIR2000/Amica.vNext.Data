@@ -1,15 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-
-// TODO split to a separate Project and repository.
+﻿using System.Collections.Generic;
 
 namespace Amica.vNext.Data
 {
 	public interface IDataProvider
 	{
-		List<T> Get<T> () where T: new();
+		List<T> Get<T> () where T: class, new();
 
-		T Get<T> (object id) where T: new();
+		T Get<T> (object id) where T: class, new();
 
 		void Update (object item);
 
